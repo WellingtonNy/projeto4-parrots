@@ -78,6 +78,9 @@ transition: all 800ms ease;
     display: none;
 }
 
+.desabilitar{
+    pointer-events: none;
+}
 
 @media (max-width: 368px){
 
