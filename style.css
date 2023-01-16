@@ -57,15 +57,26 @@ height: 146px;
 background-color: #A7E9AF;
 border: 1px solid #99CEA8;
 border-radius: 5px;
+position: relative;
+transition: all 800ms ease;
 }
 
-.card .back{
+.virar{
+    transform: rotateY(180deg);
+}
+
+.card .back,.front{
     width: 100px;
     height: 100px;
 }
 
+.front{
+    position: absolute;
+}
 
-
+.hide{
+    display: none;
+}
 
 
 @media (max-width: 368px){
