@@ -1,6 +1,7 @@
 let numeroDeCartas= 0;
 let controleDeClicks = 0;
 let controleDeClicksCertos=0;
+let controleWhile=0;
 let controleDeImg = '';
 let classeControle1;
 let classeControle2;
@@ -8,10 +9,9 @@ let back;
 let front;
 let back2;
 let front2;
-let controleWhile=0;
 
 
-const dataParrot= ["./src/unicornparrot.gif",
+let dataParrot= ["./src/unicornparrot.gif",
 "./src/revertitparrot.gif",
 "./src/tripletsparrot.gif",
 "./src/fiestaparrot.gif",
@@ -30,11 +30,17 @@ const tela = document.querySelector('.cardBoard');
         controleWhile=1
     }
 }
+    dataParrot.sort(comparador);
 
-function exibir() {
-    
+    for (let i = 0; i < numeroDeCartas/2; i++) {
+    arrayParrot.push(dataParrot[i])
+    arrayParrot.push(dataParrot[i])    
 }
+    arrayParrot.sort(comparador);
 
+    function comparador() { 
+	return Math.random() - 0.5; 
+    }
 
 
 
@@ -72,7 +78,7 @@ function NaCarta (elemento) {
           console.log(controleDeClicksCertos);
         }else{
             elemento.classList.add('controle2');
-            classeControle2 =document.querySelector('.controle2')
+            classeControle2 =document.querySelector('.controle2');
             classeControle1.classList.remove('desabilitar');
             classeControle1.classList.remove('controle1');
             classeControle2.classList.remove('desabilitar');
