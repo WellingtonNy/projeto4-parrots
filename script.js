@@ -26,7 +26,7 @@ const tela = document.querySelector('.cardBoard');
 
     while (controleWhile===0) {
     numeroDeCartas=prompt('Com quantas cartas deseja jogar? (Digite um numero PAR de 4 a 14)')
-    if (numeroDeCartas>=4 && numeroDeCartas<=14 && numeroDeCartas%2==0) {
+    if (numeroDeCartas>=4 && numeroDeCartas<=14 && numeroDeCartas%2===0) {
         controleWhile=1
     }
 }
@@ -42,7 +42,12 @@ const tela = document.querySelector('.cardBoard');
 	return Math.random() - 0.5; 
     }
 
-
+  for (let i = 0; i<arrayParrot.length; i++) {
+    tela.innerHTML+=`<li class="card" onclick="NaCarta(this)">
+    <img class="back" src="./src/back.png" alt="parrot">
+    <img class="front hide" src=${arrayParrot[i]} alt="parrot">
+    </li>`
+  }
 
 
 
