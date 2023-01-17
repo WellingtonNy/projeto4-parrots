@@ -2,6 +2,8 @@ let numeroDeCartas= 0;
 let controleDeClicks = 0;
 let controleDeClicksCertos=0;
 let controleWhile=0;
+let controleWileFimDeJogo=0;
+let controleDeReinicio='';
 let controleDeImg = '';
 let classeControle1;
 let classeControle2;
@@ -50,13 +52,6 @@ const tela = document.querySelector('.cardBoard');
   }
 
 
-
-
-
-
-
-
-
 function NaCarta (elemento) {
     controleDeClicks++;
     elemento.classList.add('gambiarra');
@@ -95,6 +90,7 @@ function NaCarta (elemento) {
             setTimeout(desvirar,1000);
         };
     };
+    setTimeout(ganhar,300)
 };
 
 function virar(elemento) {
@@ -118,3 +114,20 @@ function desvirarTempo() {
     front2.classList.add('hide');
     tela.classList.remove('desabilitar');
 };
+
+function ganhar(){
+    if(controleDeClicksCertos===numeroDeCartas/2){
+        alert(`Você ganhou em ${controleDeClicks} jogadas!`)
+        while(controleWileFimDeJogo===0) {
+            controleDeReinicio=prompt('Deseja reiniciar? (digite sim ou não)')
+            if (controleDeReinicio==='sim') {
+                controleWileFimDeJogo=1
+                window.location.reload(true);                
+            }
+            if (controleDeReinicio==='não') {
+                controleWileFimDeJogo=1
+            }
+        }
+    }
+}
+  
