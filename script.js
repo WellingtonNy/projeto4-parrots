@@ -57,9 +57,9 @@ function comparador() {
 
 
 for (let i = 0; i < arrayParrot.length; i++) {
-    tela.innerHTML += `<li class="card" onclick="NaCarta(this)">
-    <img class="back" src="./src/back.png" alt="parrot">
-    <img class="front hide" src=${arrayParrot[i]} alt="parrot">
+    tela.innerHTML += `<li data-test="card" class="card" onclick="NaCarta(this)">
+    <img data-test="face-down-image" class="back" src="./src/back.png" alt="parrot">
+    <img data-test="face-up-image" class="front hide" src=${arrayParrot[i]} alt="parrot">
     </li>`
 }
 
