@@ -1,18 +1,18 @@
-*{
+* {
     box-sizing: border-box;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 
-body{
-    font-family:'Roboto', sans-serif; 
+body {
+    font-family: 'Roboto', sans-serif;
 }
 
-.container{
+.container {
     display: flex;
     justify-content: center;
-    align-items:center;
+    align-items: center;
     width: 100%;
     min-width: 200px;
     min-height: 100vh;
@@ -20,97 +20,94 @@ body{
     background-color: #EEF9BF;
 }
 
-.subContainer{
+.subContainer {
     max-width: 1000px;
     width: 100%;
     height: 90%;
-    padding:0 12px;
+    padding: 0 12px;
 }
 
-header{
+header {
     display: flex;
     flex-direction: column;
 }
 
-.cronometro{
-font-size: 36px;
-font-weight: 700;
-line-height: 42px;
-letter-spacing: -0.004em;
-text-align: right;
-color: #86BD8D;
-padding-bottom: 15px;
+.cronometro {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 42px;
+    letter-spacing: -0.004em;
+    text-align: center;
+    color: #86BD8D;
+    padding-bottom: 15px;
 }
 
-h1{
-font-family:'Roboto', sans-serif; 
-font-size: 56px;
-font-weight: 700;
-line-height: 66px;
-letter-spacing: -0.004em;
-color: #75B79E;
-text-align: center;
-padding-bottom: 1px;
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 66px;
+    letter-spacing: -0.004em;
+    color: #75B79E;
+    text-align: center;
+    padding-bottom: 1px;
 }
 
-.cardBoard{
+.cardBoard {
     display: flex;
     flex-direction: row;
-    justify-content:center;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 35px;
     padding-bottom: 25px;
 }
 
-.card{
-display: flex;
-justify-content: center;
-align-items: center;
-width: 117px;
-height: 146px;
-background-color: #A7E9AF;
-border: 1px solid #99CEA8;
-border-radius: 5px;
-position: relative;
-transition: all 800ms ease;
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 117px;
+    height: 146px;
+    background-color: #A7E9AF;
+    border: 1px solid #99CEA8;
+    border-radius: 5px;
+    position: relative;
+    transition: all 800ms ease;
 }
 
-.virar{
+.virar {
     transform: rotateY(180deg);
 }
 
-.card .back,.front{
+.card .back,
+.front {
     width: 100px;
     height: 100px;
 }
 
-.front{
+.front {
     position: absolute;
 }
 
-.hide{
+.hide {
     display: none;
 }
 
-.desabilitar{
+.desabilitar {
     pointer-events: none;
 }
 
-@media (max-width: 368px){
+@media (max-width: 368px) {
 
-    h1{
-        font-family:'Roboto', sans-serif;
-font-size: 36px;
-font-weight: 700;
-line-height: 42px;
+    h1 {
+        font-family: 'Roboto', sans-serif;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 42px;
     }
 
-    .cardBoard{
+    .cardBoard {
         flex-direction: column;
         align-items: center;
     }
-.cronometro{
-    top:35px;
 }
-}
-    
