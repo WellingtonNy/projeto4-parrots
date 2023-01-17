@@ -83,14 +83,14 @@ function NaCarta (elemento) {
             classeControle1.classList.remove('controle1');
             classeControle2.classList.remove('desabilitar');
             classeControle2.classList.remove('controle2');
-            tela.classList.add('desabilitar')
+            tela.classList.add('desabilitar');
             controleDeImg = '';
             back2 = back;
             front2 = front;
             setTimeout(desvirar,1000);
         };
     };
-    setTimeout(ganhar,300)
+    setTimeout(ganhar,300);
 };
 
 function virar(elemento) {
@@ -123,11 +123,11 @@ function ganhar(){
             if (controleDeReinicio==='sim') {
                 controleWileFimDeJogo=1
                 window.location.reload(true);                
-            }
+            };
             if (controleDeReinicio==='não') {
                 controleWileFimDeJogo=1
-            }
-        }
-    }
-}
+            };
+        };
+    };
+};
   
